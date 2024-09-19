@@ -7,16 +7,28 @@
 </head>
 <body><textarea width="1000" height="600" readonly>\n<html>
  <head>
- <title> Modzelewski 1P</title>
+ <title> Modzelewski 2P</title>
 
  <script language="JavaScript">
+ 
+ function WinOpen_z1() 
+ {
+window.open("modz_1z.html","okienko_z1","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
+ }function WinOpen_z2() 
+ {
+window.open("modz_z2.html","okienko_z2","toolbar=no,directories=no,menubar=no,height=480,width=400,top=200,left=200");
+ }
+ function WinOpen_z3() 
+ {
+window.open("modz_z3.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=360,top=200,left=200");
+ }
  function WinOpen_z3() 
  {
 window.open("modz_z3.html","okienko_z3","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=200");
  }
 function WinOpen_z4() 
  {
-window.open("zadanie4_modz.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=380,width=160,top=200,left=400");
+window.open("zadanie4_modz.html","okienko_z4","toolbar=no,directories=no,menubar=no,height=1280,width=1060,top=200,left=400");
  }
 function okno_zamknij() 
  {
@@ -24,18 +36,23 @@ function okno_zamknij()
  }
  function WinOpen_z5()
  {
-    window.open("modz_z5.html","okienko_z5","toolbar=no,directories,height=380,width=160,top=200,left=400")
+    
+   const width = window.screen.width / 2 - 200;
+   const features = `toolbar=no,directories=no,menubar=no,height=200,width=400,top=300,left=${width}`;
+   window.open("modz_z5.html", "okienko_z5", features);
  }
  </script>
  </head>
 <body>
-    <h1 style="color: red; font-size: 40px;">Szkielet Zaliczeniowy Jakub Modzelewski JavaScript 1P</h1>
+    <h1 style="color: red; font-size: 40px;">Szkielet Zaliczeniowy Jakub Modzelewski JavaScript 2P</h1>
  <form>
- <input type="button_z3" name="zadanie3" value="zadanie3-Modzelewski" onclick="WinOpen_z3(' ')">
- <input type="button_z4" name="zadanie4" value="zadanie4-Modzelewski" onclick="WinOpen_z4(' ')">
- <input type="button_z5" name="zadanie5" value="zadanie5-Modzelewski" onclick="WinOpen_z5(' ')">
- <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
- </form>
+   <input type="button_z1" name="zadanie1" value="zadanie1-Modzelewski" onclick="WinOpen_z1(' ')">
+   <input type="button_z2" name="zadanie2" value="zadanie2-Modzelewski" onclick="WinOpen_z2(' ')">
+   <input type="button_z3" name="zadanie3" value="zadanie3-Modzelewski" onclick="WinOpen_z3(' ')">
+   <input type="button_z4" name="zadanie4" value="zadanie4-Modzelewski" onclick="WinOpen_z4(' ')">
+   <input type="button_z5" name="zadanie5" value="zadanie5-Modzelewski" onclick="WinOpen_z5(' ')">
+   <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+   </form>
 </body>
 </html>
 </textarea></body>

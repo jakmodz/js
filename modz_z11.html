@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div>
+        <script>
+                let date_1 = prompt("Podaj 1 dzień stycznia (1-31):");
+            let first = new Date(`2024-01-${date_1}`);
+            let date_2 = prompt("Podaj 2 dzień stycznia (1-31):");
+            let second = new Date(`2024-01-${date_2}`);
+            
+            let seconds_count = (second.getTime() - first.getTime()) / 1000;
+            
+            if(date_1   >  date_2)
+            {
+                document.write(Math.abs(seconds_count).toString().fontsize(30+22).fontcolor("green"));
+            }
+            else
+            {
+                document.write(seconds_count.toString().fontsize(30+22).fontcolor("green"));
+            }
+
+            
+        </script>
+    </div>
+</body>
+</html>

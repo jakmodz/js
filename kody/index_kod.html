@@ -1,4 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-Only Textarea</title>
+</head>
+<body><textarea width="1000" height="600" readonly>\n<html>
  <head>
  <title> Modzelewski 2P</title>
 
@@ -32,8 +39,7 @@
           break;
           case "zadanie5":
           {
-            const width = window.screen.width / 2 - 400;
-            const features = `toolbar=no,directories=no,menubar=no,height=220,width=860,top=100,left=${width}`;
+            const features = `toolbar=no,directories=no,menubar=no,height=200,width=400,top=300,left=${width}`;
             window.open("modz_z5.html", "okienko_z5", features);
           }
           break;
@@ -69,7 +75,7 @@
           break;
           case "zadanie11_kod":
           {
-            window.open("kody/modz_z11_kod.html", "okienko_z11_kod", features);
+            window.open("modz_z7.html", "okienko_z11_kod", features);
           }
           break;
           default:
@@ -90,23 +96,25 @@ function okno_zamknij()
 <body>
     <h1 style="color: red; font-size: 40px;">Szkielet Zaliczeniowy Jakub Modzelewski JavaScript 2P</h1>
  <form>
-   <input type="button" name="zadanie1" value="zadanie1-Modzelewski" onclick="OpenWindow('zadanie1')">
-   <input type="button" name="zadanie2" value="zadanie2-Modzelewski" onclick="OpenWindow('zadanie2')">
-   <input type="button" name="zadanie3" value="zadanie3-Modzelewski" onclick="OpenWindow('zadanie3')">
-   <input type="button" name="zadanie4" value="zadanie4-Modzelewski" onclick="OpenWindow('zadanie4')">
-   <input type="button" name="zadanie5" value="zadanie5-Modzelewski" onclick="OpenWindow('zadanie5')">
-   <input type="button" name="zadanie6" value="zadanie6-Modzelewski" onclick="OpenWindow('zadanie6')">
-   <input type="button" name="zadanie5" value="zadanie7-Modzelewski" onclick="OpenWindow('zadanie7')">
-   <input type="button" name="zadanie5" value="zadanie8-Modzelewski" onclick="OpenWindow('zadanie8')">
-   <input type="button" name="zadanie5" value="zadanie9-Modzelewski" onclick="OpenWindow('zadanie9')">
-   <input type="button" name="zadanie5" value="zadanie10-Modzelewski" onclick="OpenWindow('zadanie10')">
-   <input type="button" name="zadanie5" value="zadanie11-Modzelewski" onclick="OpenWindow('zadanie11')">
+   <input type="button_z1" name="zadanie1" value="zadanie1-Modzelewski" onclick="OpenWindow('zadanie1')">
+   <input type="button_z2" name="zadanie2" value="zadanie2-Modzelewski" onclick="OpenWindow('zadanie2')">
+   <input type="button_z3" name="zadanie3" value="zadanie3-Modzelewski" onclick="OpenWindow('zadanie3')">
+   <input type="button_z4" name="zadanie4" value="zadanie4-Modzelewski" onclick="OpenWindow('zadanie4')">
+   <input type="button_z5" name="zadanie5" value="zadanie5-Modzelewski" onclick="OpenWindow('zadanie5')">
+   <input type="button_z5" name="zadanie6" value="zadanie6-Modzelewski" onclick="OpenWindow('zadanie6')">
+   <input type="button_z5" name="zadanie5" value="zadanie7-Modzelewski" onclick="OpenWindow('zadanie7')">
+   <input type="button_z5" name="zadanie5" value="zadanie8-Modzelewski" onclick="OpenWindow('zadanie8')">
+   <input type="button_z5" name="zadanie5" value="zadanie9-Modzelewski" onclick="OpenWindow('zadanie9')">
+   <input type="button_z5" name="zadanie5" value="zadanie10-Modzelewski" onclick="OpenWindow('zadanie10')">
+   <input type="button_z5" name="zadanie5" value="zadanie11-Modzelewski" onclick="OpenWindow('zadanie11')">
    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
    </form>
    <hr width="100%" color="blue">
    <form>
-    <input type="button" name="zadanie5" value="zadanie11-kod" onclick="OpenWindow('zadanie11_kod')">
-    
+    <input type="button_z5" name="zadanie5" value="zadanie7-Modzelewski" onclick="OpenWindow('zadanie11_kod')">
+    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
     </form>
 </body>
+</html>
+</textarea></body>
 </html>
