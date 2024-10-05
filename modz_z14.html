@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="text/JavaScript">
+        let liczba = parseInt(prompt("Liczba podstawiana do mianownika w ułamku egipskim = ",""));
+        
+        let etap1 = liczba + 2;
+        let etap2 = (liczba + 1)*(liczba+2);
+        let etap3 = liczba*(liczba+1);
+
+        document.write("Wynik: 1/"+liczba+" = 1/"+ etap1 + " + 1/"+etap2+" + 1/"+etap3+"<br>");
+    </script>
+</body>
+</html>

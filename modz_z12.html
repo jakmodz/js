@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .result {
+            font-size: 52px; /* 30 + 22 */
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <script>
+        function getValidInput(promptText, min, max) {
+                let value;
+                do {
+                    value = prompt(promptText);
+                    if (value === null) 
+                    {
+                        document.write("Operation cancelled by the user.");
+                        throw new Error("Operation cancelled by the user.");
+                    }
+                } while (isNaN(value) || value < min || value > max);
+
+                return parseInt(value, 10);
+            }
+
+            let date_1_mod = getValidInput("Podaj dzień stycznia (1-31):", 1, 31);
+            let hour_1_mod = getValidInput("Podaj godzinę (0-23):", 0, 23);
+            let date_2_mod = getValidInput("Podaj drugi dzień stycznia (1-31):", 1, 31);
+            let hour_2_mod = getValidInput("Podaj drugą godzinę (0-23):", 0, 23);
+
+            date_1_mod = String(date_1_mod).padStart(2, '0');
+            hour_1_mod = String(hour_1_mod).padStart(2, '0');
+            date_2_mod = String(date_2_mod).padStart(2, '0');
+            hour_2_mod = String(hour_2_mod).padStart(2, '0');
+
+            let first_mod = new Date(`2024-01-${date_1_mod}T${hour_1_mod}:00:00`);
+            let second_mod = new Date(`2024-01-${date_2_mod}T${hour_2_mod}:00:00`);
+
+            let seconds_count_mod = (second_mod.getTime() - first_mod.getTime()) / 1000;
+
+            document.write(`<div class='result'>${Math.abs(seconds_count_mod)}</div>`);
+        </script>
+    </div>
+</body>
+</html>

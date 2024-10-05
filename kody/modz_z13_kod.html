@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-Only Textarea</title>
+</head>
+<body><textarea width="1000" height="600" readonly>\n<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let m_mod = prompt("podaj wartosc m:");
+            m_mod = parseInt(m_mod);
+            if(m_mod <= 0 )
+            {
+                document.write("zla wartosc m");
+            }
+            else
+            {
+                let result_mod = (m_mod+1)* m_mod;
+                document.write(`<h2>Rozkład ułamka egipskiego 1/${m_mod} na dwa ułamki egipskie:</h2>`);
+                document.write(`1/${m_mod}=1/${m_mod+1}+1/${result_mod}`);
+            }
+
+    </script>
+</body>
+</html>
+</textarea></body>
+</html>

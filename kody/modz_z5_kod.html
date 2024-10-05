@@ -12,22 +12,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script language="JavaScript">
+        
         function Obraz1() 
         {
-            
-            window.open("modz_obraz1.html","okienko1","toolbar=no,directories=no,menubar=no,height=380,width=460,top=600,left=200");
+            const height = window.screen.height / 2 ;
+            const width = window.screen.width / 2 - 400;
+            const features = `toolbar=no,directories=no,menubar=no,height=320,width=200,top=${height},left=${width}`;
+            window.open("modz_obraz1.html","okienko1",features);
         }
         function Obraz2() 
         {
-            window.open("modz_obraz2.html","okienko2","toolbar=no,directories=no,menubar=no,height=380,width=460,top=600,left=660");
+            const width = window.screen.width / 2 - 400;
+            let spacing = 220;
+            const height = window.screen.height / 2 ;
+            const features = `toolbar=no,directories=no,menubar=no,height=320,width=200,top=${height},left=${width+spacing}`;
+            window.open("modz_obraz2.html","okienko2",features);
         }
         function Obraz3() 
         {
-            window.open("modz_obraz3.html","okienko3","toolbar=no,directories=no,menubar=no,height=380,width=400,top=600,left=1120");
+            const width = window.screen.width / 2 - 400;
+            let spacing = 220;
+            const height = window.screen.height / 2 ;
+            const features = `toolbar=no,directories=no,menubar=no,height=320,width=200,top=${height},left=${width+(spacing*2)}`;
+            window.open("modz_obraz3.html","okienko3",features);
         }
         function Obraz4() 
         {
-            window.open("modz_obraz4.html","okienko4","toolbar=no,directories=no,menubar=no,height=380,width=460,top=600,left=1580");
+            const width = window.screen.width / 2 - 400;
+            let spacing = 220;
+            const height = window.screen.height / 2 ;
+            const features = `toolbar=no,directories=no,menubar=no,height=320,width=200,top=${height},left=${width+(spacing*3)}`;
+            window.open("modz_obraz4.html","okienko4",features);
         }
 
         </script>

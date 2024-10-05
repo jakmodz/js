@@ -39,7 +39,8 @@
           break;
           case "zadanie5":
           {
-            const features = `toolbar=no,directories=no,menubar=no,height=200,width=400,top=300,left=${width}`;
+            const width = window.screen.width / 2 - 400;
+            const features = `toolbar=no,directories=no,menubar=no,height=220,width=860,top=100,left=${width}`;
             window.open("modz_z5.html", "okienko_z5", features);
           }
           break;
@@ -73,10 +74,61 @@
             window.open("modz_z11.html", "okienko_z11", features);
           }
           break;
+          case "zadanie12":
+          {
+            window.open("modz_z12_.html", "okienko_z12", features);
+          }
+          break;
+          case "zadanie13":
+          {
+            window.open("modz_z13_.html", "okienko_z13", features);
+          }
+          break;
+          case "zadanie14":
+          {
+            window.open("modz_z14_.html", "okienko_z14", features);
+          }
+          break;
+          case "zadanie15":
+          {
+            window.open("modz_z15_.html", "okienko_z15", features);
+          }
+          break;
+          case "zadanie16":
+          {
+            window.open("modz_z16.html", "okienko_z16", features);
+          }
+          break;
           case "zadanie11_kod":
           {
-            window.open("modz_z7.html", "okienko_z11_kod", features);
+            window.open("kody/modz_z12_kod.html", "okienko_z12_kod", features);
           }
+          break;
+          case "zadanie12_kod":
+          {
+            window.open("kody/modz_z12_kod.html", "okienko_z12_kod", features);
+          }
+          break;
+          case "zadanie13_kod":
+          {
+            window.open("kody/modz_z13_kod.html", "okienko_z13_kod", features);
+          }
+          break;
+          case "zadanie14_kod":
+          {
+            window.open("kody/modz_z14_kod.html", "okienko_z14_kod", features);
+          }
+          break;
+          case "zadanie15_kod":
+          {
+            window.open("kody/modz_z15_kod.html", "okienko_z15_kod", features);
+          }
+          break;
+          case "zadanie16_kod":
+          {
+            window.open("kody/modz_z16_kod.html", "okienko_z16_kod", features);
+          }
+
           break;
           default:
             {
@@ -96,23 +148,33 @@ function okno_zamknij()
 <body>
     <h1 style="color: red; font-size: 40px;">Szkielet Zaliczeniowy Jakub Modzelewski JavaScript 2P</h1>
  <form>
-   <input type="button_z1" name="zadanie1" value="zadanie1-Modzelewski" onclick="OpenWindow('zadanie1')">
-   <input type="button_z2" name="zadanie2" value="zadanie2-Modzelewski" onclick="OpenWindow('zadanie2')">
-   <input type="button_z3" name="zadanie3" value="zadanie3-Modzelewski" onclick="OpenWindow('zadanie3')">
-   <input type="button_z4" name="zadanie4" value="zadanie4-Modzelewski" onclick="OpenWindow('zadanie4')">
-   <input type="button_z5" name="zadanie5" value="zadanie5-Modzelewski" onclick="OpenWindow('zadanie5')">
-   <input type="button_z5" name="zadanie6" value="zadanie6-Modzelewski" onclick="OpenWindow('zadanie6')">
-   <input type="button_z5" name="zadanie5" value="zadanie7-Modzelewski" onclick="OpenWindow('zadanie7')">
-   <input type="button_z5" name="zadanie5" value="zadanie8-Modzelewski" onclick="OpenWindow('zadanie8')">
-   <input type="button_z5" name="zadanie5" value="zadanie9-Modzelewski" onclick="OpenWindow('zadanie9')">
-   <input type="button_z5" name="zadanie5" value="zadanie10-Modzelewski" onclick="OpenWindow('zadanie10')">
-   <input type="button_z5" name="zadanie5" value="zadanie11-Modzelewski" onclick="OpenWindow('zadanie11')">
+   <input type="button" name="zadanie1" value="zadanie1-Modzelewski" onclick="OpenWindow('zadanie1')">
+   <input type="button" name="zadanie2" value="zadanie2-Modzelewski" onclick="OpenWindow('zadanie2')">
+   <input type="button" name="zadanie3" value="zadanie3-Modzelewski" onclick="OpenWindow('zadanie3')">
+   <input type="button" name="zadanie4" value="zadanie4-Modzelewski" onclick="OpenWindow('zadanie4')">
+   <input type="button" name="zadanie5" value="zadanie5-Modzelewski" onclick="OpenWindow('zadanie5')">
+   <input type="button" name="zadanie6" value="zadanie6-Modzelewski" onclick="OpenWindow('zadanie6')">
+   <input type="button" name="zadanie5" value="zadanie7-Modzelewski" onclick="OpenWindow('zadanie7')">
+   <input type="button" name="zadanie5" value="zadanie8-Modzelewski" onclick="OpenWindow('zadanie8')">
+   <input type="button" name="zadanie5" value="zadanie9-Modzelewski" onclick="OpenWindow('zadanie9')">
+   <input type="button" name="zadanie5" value="zadanie10-Modzelewski" onclick="OpenWindow('zadanie10')">
+   <input type="button" name="zadanie5" value="zadanie11-Modzelewski" onclick="OpenWindow('zadanie11')">
+   <input type="button" name="zadanie5" value="zadanie12-Modzelewski" onclick="OpenWindow('zadanie12')">
+   <input type="button" name="zadanie5" value="zadanie13-Modzelewski" onclick="OpenWindow('zadanie13')">
+   <input type="button" name="zadanie5" value="zadanie14-Modzelewski" onclick="OpenWindow('zadanie14')">
+   <input type="button" name="zadanie5" value="zadanie15-Modzelewski" onclick="OpenWindow('zadanie15')">
+   <input type="button" name="zadanie5" value="zadanie16-Modzelewski" onclick="OpenWindow('zadanie16')">
    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
    </form>
    <hr width="100%" color="blue">
    <form>
-    <input type="button_z5" name="zadanie5" value="zadanie7-Modzelewski" onclick="OpenWindow('zadanie11_kod')">
-    <input type="button" value="zamknij okno" onclick="okno_zamknij()"/>
+    <input type="button" name="zadanie5" value="zadanie11-kod" onclick="OpenWindow('zadanie11_kod')">
+    <input type="button" name="zadanie5" value="zadanie12-kod" onclick="OpenWindow('zadanie12_kod')">
+    <input type="button" name="zadanie5" value="zadanie13-kod" onclick="OpenWindow('zadanie13_kod')">
+    <input type="button" name="zadanie5" value="zadanie14-kod" onclick="OpenWindow('zadanie14_kod')">
+    <input type="button" name="zadanie5" value="zadanie15-kod" onclick="OpenWindow('zadanie15_kod')">
+    <input type="button" name="zadanie5" value="zadanie16-kod" onclick="OpenWindow('zadanie16_kod')">
+    
     </form>
 </body>
 </html>

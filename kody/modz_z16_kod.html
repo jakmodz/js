@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-Only Textarea</title>
+</head>
+<body><textarea width="1000" height="600" readonly>\n<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 16 - Kowalski</title>
+    <style>
+        .wynik {
+            color: navy; /* Kolor liter granatowy */
+            font-size: 3em; /* Duży rozmiar tekstu, aby zajął całą szerokość ekranu */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const A = parseFloat(prompt("Podaj pierwsza liczbe A="));
+        const B = parseFloat(prompt("Podaj druga liczbe B="));
+
+        if (isNaN(A) || isNaN(B)) {
+            document.write("<h2>Podano niepoprawne dane. Prosze odswiezyc strone i sprobowac ponownie.</h2>");
+        } 
+        else 
+        {
+            const wynik = Math.pow(A + B, 3);
+            const czesc1 = Math.pow(A, 3);
+            const czesc2 = 3 * Math.pow(A, 2) * B;
+            const czesc3 = 3 * A * Math.pow(B, 2);
+            const czesc4 = Math.pow(B, 3);
+            const wynikTekst = `(${A} + ${B})^3 = ${A}^3 + 3*(${A})^2*(${B}) + 3*(${A})*(${B})^2 + ${B}^3 = ${czesc1} + ${czesc2} + ${czesc3} + ${czesc4} = ${wynik}`;
+            document.write(`<div class="wynik">${wynikTekst}</div>`);
+        }
+    </script>
+</body>
+</html>
+
+</textarea></body>
+</html>

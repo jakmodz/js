@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-Only Textarea</title>
+</head>
+<body><textarea width="1000" height="600" readonly>\n<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozklad Ulamka Egipskiego</title>
+</head>
+<body>
+    <script>
+     
+        const m = prompt("Podaj wartosc m wieksza od zera:");
+
+      
+        const liczbaM = parseInt(m);
+
+       
+        if (isNaN(liczbaM) || liczbaM <= 0) {
+            alert("Prosze podac poprawna wartosc m wieksza od zera.");
+        } else {
+          
+            const ulamkeRozlozony = `1/${liczbaM} = 1/${2 * liczbaM} + 1/${2 * liczbaM}`;
+           
+            document.write(`<h2>${ulamkeRozlozony}</h2>`);
+        }
+    </script>
+</body>
+</html>
+
+</textarea></body>
+</html>

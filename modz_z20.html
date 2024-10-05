@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 20</title>
+    <script>
+        function AB_mod() {
+            const xa = parseFloat(document.getElementById('xa').value);
+            const ya = parseFloat(document.getElementById('ya').value);
+            const xb = parseFloat(document.getElementById('xb').value);
+            const yb = parseFloat(document.getElementById('yb').value);
+            return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+        }
+
+        function BC_mod() {
+            const xb = parseFloat(document.getElementById('xb').value);
+            const yb = parseFloat(document.getElementById('yb').value);
+            const xc = parseFloat(document.getElementById('xc').value);
+            const yc = parseFloat(document.getElementById('yc').value);
+            return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+        }
+
+        function AC_mod() {
+            const xa = parseFloat(document.getElementById('xa').value);
+            const ya = parseFloat(document.getElementById('ya').value);
+            const xc = parseFloat(document.getElementById('xc').value);
+            const yc = parseFloat(document.getElementById('yc').value);
+            return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+        }
+
+        function obliczDlugosci() {
+            const AB = AB_mod();
+            const BC = BC_mod();
+            const AC = AC_mod();
+
+            document.getElementById('wynik').innerHTML = 
+                `Długość boku AB: ${AB.toFixed(2)}<br>
+                Długość boku BC: ${BC.toFixed(2)}<br>
+                Długość boku AC: ${AC.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Wczytaj Punkty Trójkąta</h1>
+    <form onsubmit="event.preventDefault(); obliczDlugosci();">
+        <label for="xa">Punkt A (x):</label>
+        <input type="number" id="xa" required><br>
+        <label for="ya">Punkt A (y):</label>
+        <input type="number" id="ya" required><br>
+        <label for="xb">Punkt B (x):</label>
+        <input type="number" id="xb" required><br>
+        <label for="yb">Punkt B (y):</label>
+        <input type="number" id="yb" required><br>
+        <label for="xc">Punkt C (x):</label>
+        <input type="number" id="xc" required><br>
+        <label for="yc">Punkt C (y):</label>
+        <input type="number" id="yc" required><br>
+        <button type="submit">Oblicz Długości Boków</button>
+    </form>
+
+    <h2>Wyniki:</h2>
+    <div id="wynik"></div>
+</body>
+</html>
