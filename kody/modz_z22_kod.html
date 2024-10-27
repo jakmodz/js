@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-Only Textarea</title>
+</head>
+<body><textarea width="1000" height="600" readonly>\n<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="number" id ="a_dane_modzelewski">
+    <input type="number" id ="b_dane_modzelewski">
+    <button onclick="Pole_modzelewski()">oblicz obwod</button> <button onclick="obowd_modzelewski()"> oblicz obwod</button>
+    <br>
+    <span id="1"></span>
+    <br>
+    <span id="2">  </span>
+    <script>
+
+        function Pole_modzelewski()
+        {
+            let a = document.getElementById("a_dane_modzelewski").value;
+            let b = document.getElementById("b_dane_modzelewski").value;
+            const cos = document.getElementById("1").innerText = `pole : ${a*b}`;
+        }
+        function obowd_modzelewski()
+        {
+            let a = parseFloat(document.getElementById("a_dane_modzelewski").value);
+            let b = parseFloat(document.getElementById("b_dane_modzelewski").value);
+            const cos = document.getElementById("2").innerText = `obwod: ${a*2+2*b}`;
+        }
+    </script>
+</body>
+</html>
+</textarea></body>
+</html>
