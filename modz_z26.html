@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obliczenia trapezu równoramiennego</title>
     <script>
-        function Pow_kowalski(a, b, h) {
+        function Pow_modzelewski(a, b, h) {
             return ((Math.abs(a) + Math.abs(b)) / 2) * h;
         }
 
-        function Obw_kowalski(a, b, h) {
+        function Obw_modzelewski(a, b, h) {
             const d = (Math.abs(a) - Math.abs(b)) / 2;
             const ramie = Math.sqrt(h * h + d * d);
             return Math.abs(a) + Math.abs(b) + 2 * ramie;
@@ -19,8 +19,8 @@
             const a = parseFloat(document.getElementById("górna").value);
             const b = parseFloat(document.getElementById("dolna").value);
             const h = parseFloat(document.getElementById("wysokość").value);
-            const pole = Pow_kowalski(a, b, h);
-            const obwod = Obw_kowalski(a, b, h);
+            const pole = Pow_modzelewski(a, b, h);
+            const obwod = Obw_modzelewski(a, b, h);
             document.write("<h2>Wyniki obliczeń:</h2>");
             document.write("<p>Pole trapezu: " + pole.toFixed(2) + " jednostek kwadratowych</p>");
             document.write("<p>Obwód trapezu: " + obwod.toFixed(2) + " jednostek</p>");
