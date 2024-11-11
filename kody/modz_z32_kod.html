@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read-Only Textarea</title>
+</head>
+<body><textarea width="1000" height="600" readonly>\n<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zadanie 32</title>
+</head>
+<body>
+    <br> 
+    programowanie obiektowe<br>
+    <script>
+        function Wiezowiec(ile_pieter,nazwa,rok_zbudowania,wysokosc)
+        {
+            this.ile_pieter = ile_pieter
+            this.nazwa = nazwa;
+            this.rok_zbudowania = rok_zbudowania;
+            this.wysokosc = wysokosc;
+        }
+        Wiezowiec.prototype.wypisz = function()
+        {
+           alert(`nazwa : ${this.nazwa} ilosc pieter:${this.ile_pieter} rok zbudowania: ${this.rok_zbudowania} wysokosc: ${this.wysokosc} m`);
+        }
+        Wiezowiec.prototype.dostep_do_wlasciwosci = function()
+        {
+            document.write("dostęp do właściwości"+"<br>");
+            document.write(`nazwa : ${this.nazwa} ilosc pieter:${this.ile_pieter} rok zbudowania: ${this.rok_zbudowania} wysokosc: ${this.wysokosc} m`);
+        }
+
+
+        const wiezowiec_1 = new Wiezowiec(30,"RSA",1999,200);
+        const wiezowiec_2 = new Wiezowiec(36,"SHA",2008,230);
+        const wiezowiec_3 = new Wiezowiec(39,"SHIKASNU",2009,300);
+         wiezowiec_1.wypisz();
+         wiezowiec_1.dostep_do_wlasciwosci();
+         wiezowiec_2.wypisz();
+         wiezowiec_2.dostep_do_wlasciwosci();
+         wiezowiec_3.wypisz();
+         wiezowiec_3.dostep_do_wlasciwosci();
+    </script>
+    
+
+</body>
+</html>
+</textarea></body>
+</html>

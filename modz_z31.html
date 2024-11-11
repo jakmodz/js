@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 31</title>
+    
+</head>
+<body>
+    
+    <br> 
+    Programowanie obiektowe. <br> 
+      Obiekt  to  człowiek<br> 
+      Pola:<br> 
+      ile_pieter<br> 
+      nazwa<br> 
+      rok zbudowania<br> 
+      metoda:  Wiezowiec_wyswietl_modzelewski<br> 
+      nowe pole to wysokosc<br>
+      nowe metoda to Wiezowiec_pokaz_modzelewski();<br> 
+      <script>
+        let Wiezowiec = 
+        {
+            ile_pieter: 5,
+            nazwa: "Serw Tower",
+            rok_zbudowania: 2006,
+            Wiezowiec_wyswietl_modzelewski: function()
+            {
+                document.write(`nazwa : ${this.nazwa} ilosc pieter:${this.ile_pieter} rok zbudowania: ${this.rok_zbudowania}`);
+            } 
+        }
+            Wiezowiec.Wiezowiec_wyswietl_modzelewski();
+            Wiezowiec.wysokosc = 300;
+            Wiezowiec.Wiezowiec_pokaz_modzelewski = function ()
+            {
+                alert(`nazwa : ${this.nazwa} ilosc pieter:${this.ile_pieter} rok zbudowania: ${this.rok_zbudowania} wysokosc: ${this.wysokosc} m`);
+            }
+            Wiezowiec.Wiezowiec_pokaz_modzelewski();
+
+    </script>
+</body>
+</html>
