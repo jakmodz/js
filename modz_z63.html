@@ -5,14 +5,14 @@
 <title>Tabele zadanie2</title> 
 </head> 
 <body> 
-<script> 
-var Tablica_N = new Array('Anna', 'Adam', 'Piotr', 'Ewa', 'Paweł', 'Marcin', 'Ela'); 
-Tablica_N.push("Daniel");
-Tablica_N.shift(); 
-Tablica_N.reverse();
-for (i =Tablica_N.length-1 ; i> 0; i--) 
-{ 
-document.write(Tablica_N[i] + "<br>"); 
-} 
+    <script> 
+    var Tablica_N = new Array('Anna', 'Adam', 'Piotr', 'Ewa', 'Paweł', 'Marcin', 'Ela'); 
+    Tablica_N.push("Daniel");
+    Tablica_N.shift(); 
+    let warkusz = Tablica_N.reverse();
+    for (i =0 ; i< warkusz.length; i++) 
+    { 
+        document.write(warkusz[i] + "<br>"); 
+    } 
 </script> 
 </body> 

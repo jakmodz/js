@@ -31,11 +31,13 @@ function rozwiazUklad() {
         let X = Wx / W;
         let Y = Wy / W;
         document.writeln(`Układ ma jedno rozwiązanie: X = ${X.toFixed(2)}, Y = ${Y.toFixed(2)}`);
-    } else {
+    } 
+    else {
         if (Wx !== 0 || Wy !== 0) {
             
             document.writeln("Układ jest sprzeczny (brak rozwiązania).");
-        } else {
+        } 
+        else {
             
             document.writeln("Układ ma nieskończoność rozwiązań.");
         }

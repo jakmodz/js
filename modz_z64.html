@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sortowanie tablicy</title>
 </head>
 <body>
     <script>
-        function porownaj(a,b) 
-        { 
-            return a - b 
+        function porownaj(a, b) { 
+            return a - b;
         } 
-        var Tablica = new Array(27, 100, 10, 450, 1654, 320); 
-        document.write('Bez sortowania: ' + Tablica.join()  ); 
-        document.write('    Sortowanie domyślne: '); 
-        Tablica.sort() 
-        document.write(Tablica.join()); 
-        document.write('    Sortowanie poprawne:'); 
-        Tablica.sort(porownaj) 
-        document.write(+Tablica.join() ); 
+        
+        var Tablica = [27, 100, 10, 450, 1654, 320];
+
+        document.write('Bez sortowania: ' + Tablica.join(', ') + '<br>'); 
+
+        document.write('Sortowanie domyślne: ');
+        Tablica.sort();
+        document.write(Tablica.join(', ') + '<br>');
+
+        document.write('Sortowanie poprawne: ');
+        Tablica.sort(porownaj);
+        document.write(Tablica.join(', ') + '<br>');
+
+        document.write('Sortowanie odwrotne: ');
+        Tablica.reverse();
+        document.write(Tablica.join(', '));
     </script>
-    
 </body>
 </html>
