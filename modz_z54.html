@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Modzelewski - Rysowanie prostokąta</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+        }
+        #prostokat {
+            white-space: pre;
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rysowanie prostokąta z gwiazdek</h1>
+    <button onclick="rysujProstokat()">Narysuj prostokąt</button>
+    <div id="prostokat"></div>
+
+    <script>
+    function rysujProstokat() {
+        let a_mod = parseInt(prompt("Podaj wysokość prostokąta (a):"));
+        let b_mod = parseInt(prompt("Podaj szerokość prostokąta (b):"));
+        
+        if (isNaN(a_mod) || isNaN(b_mod) || a_mod <= 0 || b_mod <= 0) {
+            alert("Podaj poprawne dodatnie liczby!");
+            return;
+        }
+
+        let wynik = "";
+
+        for (let g_mod = 1; g_mod <= b_mod; g_mod++) {
+            wynik += "*";
+        }
+        wynik += "\n";
+
+        for (let w_mod = 1; w_mod <= (a_mod - 2); w_mod++) {
+            let wiersz_mod = "*";
+            
+            for (let s_mod = 1; s_mod <= (b_mod - 2); s_mod++) {
+                wiersz_mod += "  ";
+            }
+            
+            wiersz_mod += "*\n";
+            wynik += wiersz_mod;
+        }
+
+        for (let d_mod = 1; d_mod <= b_mod; d_mod++) {
+            wynik += "*";
+        }
+
+        document.getElementById('prostokat').textContent = wynik;
+    }
+    </script>
+</body>
+</html>

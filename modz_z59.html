@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Punkty kratowe w kole</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #wynik {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Obliczanie punktów kratowych w kole</h1>
+    <button onclick="obliczPunktyKratowe()">Oblicz punkty kratowe</button>
+    <div id="wynik"></div>
+
+    <script>
+    function obliczPunktyKratowe() {
+        let R_mod = parseFloat(prompt("Podaj promień koła R:"));
+        
+        if (isNaN(R_mod) || R_mod < 0) {
+            alert("Podaj nieujemną liczbę rzeczywistą!");
+            return;
+        }
+
+        let liczbaPunktowKratowych = 0;
+
+        for (let x_mod = -Math.floor(R_mod); x_mod <= Math.floor(R_mod); x_mod++) {
+            for (let y_mod = -Math.floor(R_mod); y_mod <= Math.floor(R_mod); y_mod++) {
+                if (x_mod * x_mod + y_mod * y_mod <= R_mod * R_mod) {
+                    liczbaPunktowKratowych++;
+                }
+            }
+        }
+
+        document.getElementById('wynik').innerHTML = `
+            Promień koła R = ${R_mod}<br>
+            Liczba punktów kratowych: ${liczbaPunktowKratowych}
+        `;
+    }
+    </script>
+</body>
+</html>

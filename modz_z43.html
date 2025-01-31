@@ -1,0 +1,54 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Modzelewski - Zadanie 43</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #wynik {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wyświetlanie liczb parzystych</h1>
+    <button onclick="wyswietlParzyste()">Pokaż liczby parzyste</button>
+    <div id="wynik"></div>
+
+    <script src="skrypt_mod.js">
+
+    function wyswietlParzyste() {
+    
+    let koniec_petli_mod = parseInt(prompt("Podaj liczbę końcową:"));
+    
+   
+    if (isNaN(koniec_petli_mod)) {
+        alert("Podaj poprawną liczbę!");
+        return;
+    }
+
+    
+    let i_mod = 2;
+    
+   
+    let wyniki = [];
+
+   
+    while (i_mod <= koniec_petli_mod) {
+        if (i_mod % 2 === 0) {
+            wyniki.push(i_mod);
+        }
+        i_mod++;
+    }
+
+   
+    document.getElementById('wynik').innerHTML = 
+        `Liczby parzyste od 2 do ${koniec_petli_mod}: <br>` + wyniki.join(', ');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortArray(arr) {
+    
+    let letters = arr.filter(item => isNaN(item)).sort();
+    let numbers = arr.filter(item => !isNaN(item)).map(Number).sort((a, b) => a - b);
+    
+    
+    return [...letters, ...numbers];
+    }
+
+
+let array = ['b', '3', 'a', '1', 'c', '2'];
+let sortedArray = sortArray(array);
+document.write(array);
+    </script>
+</body>
+</html>

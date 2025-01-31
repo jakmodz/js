@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Modzelewski - Zadanie 52</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            text-align: center;
+        }
+        #prostokat {
+            white-space: pre;
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rysowanie prostokąta z gwiazdek</h1>
+    <button onclick="rysujProstokat()">Narysuj prostokąt</button>
+    <div id="prostokat"></div>
+
+    <script>
+    function rysujProstokat() {
+        let nazwisko = "Modzelewski";
+        let imie = "Jakub";
+        
+        let a_kow = (nazwisko.length % 4) + 5;
+        let b_kow = (imie.length % 6) + 20;
+
+        let prostokat = "";
+
+        for (let i = 0; i < b_kow; i++) {
+            prostokat += "*";
+        }
+        prostokat += "\n";
+
+        for (let j = 0; j < a_kow - 2; j++) {
+            prostokat += "*";
+            for (let k = 0; k < b_kow - 2; k++) {
+                prostokat += " ";
+            }
+            prostokat += "*\n";
+        }
+
+        for (let i = 0; i < b_kow; i++) {
+            prostokat += "*";
+        }
+
+        document.getElementById('prostokat').textContent = prostokat;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+function rozwiazUklad() {
+    
+    let A = [
+        [2, 3, 5], 
+        [-4, 8, 0] 
+    ];
+
+   
+    let W = A[0][0] * A[1][1] - A[0][1] * A[1][0]; 
+    let Wx = A[0][2] * A[1][1] - A[1][2] * A[0][1];
+    let Wy = A[0][0] * A[1][2] - A[1][0] * A[0][2];
+
+    
+   document.writeln(`Wyznacznik główny W = ${W}`);
+   document.writeln(`Wyznacznik Wx = ${Wx}`);
+   document.writeln(`Wyznacznik Wy = ${Wy}`);
+
+    
+    if (W !== 0) {
+        
+        let X = Wx / W;
+        let Y = Wy / W;
+        document.writeln(`Układ ma jedno rozwiązanie: X = ${X.toFixed(2)}, Y = ${Y.toFixed(2)}`);
+    } else {
+        if (Wx !== 0 || Wy !== 0) {
+            
+            document.writeln("Układ jest sprzeczny (brak rozwiązania).");
+        } else {
+            
+            document.writeln("Układ ma nieskończoność rozwiązań.");
+        }
+    }
+}
+
+
+rozwiazUklad();
+
+    </script>
+</body>
+</html>

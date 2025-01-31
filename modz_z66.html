@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+
+let table = document.createElement("table");
+let images = [
+    "https://picsum.photos/200/300", "https://picsum.photos/200/300", "https://picsum.photos/270/300",
+    "https://picsum.photos/200/300", "https://picsum.photos/203/300", "https://picsum.photos/240/300",
+    "https://picsum.photos/280/600", "https://picsum.photos/200/310", "https://picsum.photos/220/300"
+];
+
+let index = 0;
+for (let i = 0; i < 3; i++) {
+    let row = document.createElement("tr");
+    for (let j = 0; j < 3; j++) {
+        let cell = document.createElement("td");
+        let img = document.createElement("img");
+        img.src = images[index];
+        img.width = 100;
+        img.height = 100;
+        cell.appendChild(img);
+        row.appendChild(cell);
+        index++;
+    }
+    table.appendChild(row);
+}
+
+document.body.appendChild(table);
+
+setInterval(() => {
+    let imgs = document.querySelectorAll("td img");
+    imgs.forEach(img => {
+        let randomIndex = Math.floor(Math.random() * images.length);
+        img.src = images[randomIndex];
+    });
+}, 2000);
+
+    </script>
+</body>
+</html>

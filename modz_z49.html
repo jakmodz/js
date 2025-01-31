@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Modzelewski - Zadanie 49</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #wynik {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Obliczanie silni</h1>
+    <button onclick="obliczSilnie()">Oblicz silnię</button>
+    <div id="wynik"></div>
+
+    <script>
+    function obliczSilnie() {
+        let n_kow = parseInt(prompt("Podaj liczbę n dla obliczenia silni:"));
+        
+        if (isNaN(n_kow) || n_kow < 0) {
+            alert("Podaj nieujemną liczbę całkowitą!");
+            return;
+        }
+
+        let silnia_kow = 1;
+
+        if (n_kow === 0) {
+            silnia_kow = 1;
+        } 
+        else {
+            for (let i_kow = 1; i_kow <= n_kow; i_kow++) {
+                silnia_kow *= i_kow;
+            }
+        }
+
+        document.getElementById('wynik').innerHTML = 
+            `n = ${n_kow}<br>${n_kow}! = ${silnia_kow}`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function obliczWyznacznik(macierz) {
+        let sumaLewe = 
+            macierz[0][0] * macierz[1][1] * macierz[2][2] +
+            macierz[0][1] * macierz[1][2] * macierz[2][0] +
+            macierz[0][2] * macierz[1][0] * macierz[2][1];
+
+        let sumaPrawe = 
+            macierz[0][2] * macierz[1][1] * macierz[2][0] +
+            macierz[0][0] * macierz[1][2] * macierz[2][1] +
+            macierz[0][1] * macierz[1][0] * macierz[2][2];
+
+        let wyznacznik = sumaLewe - sumaPrawe;
+
+        return wyznacznik;
+        }
+
+        function wczytajMacierz() {
+        let macierz = [
+            [2, 3, 5],
+            [-1, 4, 6],
+            [3, -2, 7]
+        ];
+      
+       
+        for(let i = 0;i<3;i++)
+        {
+            for(let j = 0;j<3;j++)
+            {
+                document.writeln(macierz[j][i])
+            }
+            document.write("<br>")
+        }
+
+        let wynik = obliczWyznacznik(macierz);
+       document.write("Wyznacznik tej macierzy wynosi: " + wynik);
+        }
+
+wczytajMacierz();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html lang="pl"> 
+<head> 
+<meta charset="UTF-8"> 
+<title>Tabele zadanie1</title> 
+</head> 
+<body> 
+<script> 
+var suma_kow=0; 
+var T_kow = new Array() 
+
+let end = parseInt(prompt("podja koniec"));
+for (i = 0; i < end; i++) 
+{ 
+T_kow[i] = i; 
+suma_kow=suma_kow+i; 
+document.write("T["+i+"]="+T_kow[i]+"<br>"); 
+} 
+var srednia_kow=suma_kow/i; 
+document.write("suma="+suma_kow+"<br>"); 
+document.write("średnia="+srednia_kow.toFixed(2)+"<br>"); 
+</script> 
+</body> 
+</html>
